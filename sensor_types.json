@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Temperature"
+  },
+  {
+    "name": "Humidity"
+  },
+  {
+    "name": "AirQuality"
+  },
+  {
+    "name": "Barometric"
+  },
+  {
+    "name": "Movement"
+  },
+  {
+    "name": "Sound"
+  }
+]

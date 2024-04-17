@@ -145,6 +145,17 @@ def checkDeviceProfileJson(aObject, aPath):
 
     return True
 
+
+# ===========================================================================
+# Check Sensor Types JSON
+# ===========================================================================
+def checkSensorTypesJson(aObject, aPath):
+    if not "name" in aObject:
+        print (f"ERROR: 'name' not found.")
+        return False
+    
+    return True
+
 # ===========================================================================
 # Main
 # ===========================================================================
@@ -155,12 +166,29 @@ def main():
 
     output_list = []
 
+    # Check syntax of sensor_type.json
+    target_filepath = "sensor_types.json"
+    print (f"Checking {target_filepath}")
+    j_sensor_type = readJsonFile(target_filepath)
+    if not isinstance(j_sensor_type, list):
+        print (f"{target_filepath}: Invalid  JSON. Top level is not a list.")
+        sys.exit(1)
+    for item in j_sensor_type:
+        if not checkSensorTypesJson(item, target_filepath):
+            print (f"Check {target_filepath} failed.")
+            sys.exit(1)
+    print (f"  {target_filepath} is good.")
+
     # scan all directory
     with os.scandir() as top_dir_list:
         for company in top_dir_list:
             sensor_list = []
 
             if not company.is_dir():
+                continue
+            
+            # Filter out unwanted name
+            if company.name == ".git":
                 continue
 
             # Read info.json to get the full name
@@ -202,7 +230,7 @@ def main():
                 continue
             
             sensor_list.sort(key=lambda x: x["name"])
-            output_list.insert(len(output_list), {"name":company_full_name, "deviceList":sensor_list})
+            output_list.insert(len(output_list), {"name":company_full_name, "deviceProfileList":sensor_list})
             print (f"  Total {len(sensor_list)} item(s) found.")
     
     output_list.sort(key=lambda x: x["name"])

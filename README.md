@@ -63,6 +63,6 @@ Maximum size 128KiB.
 
 The Codec js file contains 2 entry functions, `decodeUplink(input) {}` and `encodeDownlink(input) {}`. The ChirpVM will call `decodeUplink` when a Uplink happens, and call `encodeDownlink` before queuing a Downlink.
 
-[Example JSON file](./matchx/x2e_env_sensor_eu868.json)
+[Example JSON file](./matchx/x2e_ref_sensor_eu868.json)
 
 [Example Codec js file](./matchx/matchx_generic_codec.js)

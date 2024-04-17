@@ -1,0 +1,13 @@
+{
+    "name": "X2E Ref Sensor - ISM2400",
+    "region": "ISM2400",
+    "macVersion": "1.0.4",
+    "regParamRevision": "RP002-1.0.3",
+    "adrAlgorithmId": "lora_lr_fhss",
+    "expectedUpInterval": 7200,
+    "deviceStatusReqPerDay": 3,
+    "codecUrl": "./matchx_generic_codec.js",
+    "classC": false,
+    "image": "./x2e_ref_sensor.jpeg"
+}
+

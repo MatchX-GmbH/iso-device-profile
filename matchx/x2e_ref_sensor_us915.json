@@ -1,11 +1,11 @@
 {
-    "name": "X2E Environmental Sensor - EU868",
-    "region": "EU868",
+    "name": "X2E Ref Sensor - US915",
+    "region": "US915",
     "macVersion": "1.0.4",
     "regParamRevision": "RP002-1.0.3",
     "adrAlgorithmId": "lora_lr_fhss",
-    "expectedUpInterval": 3600,
-    "deviceStatusReqPerDay": 1,
+    "expectedUpInterval": 7200,
+    "deviceStatusReqPerDay": 3,
     "codecUrl": "./matchx_generic_codec.js",
     "classC": false,
     "image": "./x2e_ref_sensor.jpeg"

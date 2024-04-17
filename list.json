@@ -1,10 +1,14 @@
 [
   {
     "name": "MatchX GmbH",
-    "deviceList": [
+    "deviceProfileList": [
       {
         "name": "X2E Environmental Sensor - EU868",
         "path": "./matchx/x2e_env_sensor_eu868.json"
+      },
+      {
+        "name": "X2E Environmental Sensor - US915",
+        "path": "./matchx/x2e_env_sensor_us915.json"
       }
     ]
   }
