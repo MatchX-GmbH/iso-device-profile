@@ -99,7 +99,7 @@ def checkDeviceProfileJson(aObject, aPath):
     
     # Check region
     obj_region = aObject["region"]
-    supported_region = ["EU868", "US915", "CN470", "KR920", "AU915", "AS923"]
+    supported_region = ["EU868", "US915", "CN470", "KR920", "AU915", "AS923", "ISM2400"]
     if not obj_region in supported_region:
         print (f"ERROR: region '{obj_region}' not supported.")
         return False

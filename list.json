@@ -3,12 +3,16 @@
     "name": "MatchX GmbH",
     "deviceProfileList": [
       {
-        "name": "X2E Environmental Sensor - EU868",
-        "path": "./matchx/x2e_env_sensor_eu868.json"
+        "name": "X2E Ref Sensor - EU868",
+        "path": "./matchx/x2e_ref_sensor_eu868.json"
       },
       {
-        "name": "X2E Environmental Sensor - US915",
-        "path": "./matchx/x2e_env_sensor_us915.json"
+        "name": "X2E Ref Sensor - ISM2400",
+        "path": "./matchx/x2e_ref_sensor_ism2400.json"
+      },
+      {
+        "name": "X2E Ref Sensor - US915",
+        "path": "./matchx/x2e_ref_sensor_us915.json"
       }
     ]
   }
