@@ -3,6 +3,10 @@
     "name": "MatchX GmbH",
     "deviceProfileList": [
       {
+        "name": "NTAG Validator - EU868",
+        "path": "./matchx/ntag_validator_eu868.json"
+      },
+      {
         "name": "X2E Ref Sensor - EU868",
         "path": "./matchx/x2e_ref_sensor_eu868.json"
       },
