@@ -4,20 +4,20 @@ function decodeUplink(input) {
       var rawdata = input.bytes;
       var ret_data = MatchXDecode(rawdata);
 
-      ret_data.push({
-        field: "rawData",
-        value: arrayToHex(rawdata)
-      });
-      ret_data.push({
-        field: "rawDataLen",
-        value: rawdata.length
-      })
-
+      // Pack sensor data to output
       var output = {};
       for (var i = 0; i < ret_data.length; i++) {
         output[ret_data[i].field] = ret_data[i].value;
       }
 
+      // Pack debug
+      var debug = {};
+      debug["rawData"] = arrayToHex(rawdata);
+      debug["rawDataLen"] = rawdata.length;
+      
+      output["debug"] = debug;
+
+      //
       return { data: output };
     }
     else {

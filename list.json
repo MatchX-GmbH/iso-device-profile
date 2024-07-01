@@ -7,6 +7,10 @@
         "path": "./matchx/ntag_validator_eu868.json"
       },
       {
+        "name": "X2E Class C - ISM2400",
+        "path": "./matchx/x2e_class_c_ism2400.json"
+      },
+      {
         "name": "X2E Ref Sensor - EU868",
         "path": "./matchx/x2e_ref_sensor_eu868.json"
       },
