@@ -145,9 +145,9 @@ function decodeGps(aNameIdx, aData) {
     var raw_long = (aData[5] << 24) | (aData[6] << 16) | (aData[7] << 8) | aData[8];
     var raw_alt = (aData[9] << 8) | aData[10];
 
-    ret_obj.push({ field: 'latitude' + aNameIdx, value: bytes2Float32(raw_lat) });
-    ret_obj.push({ field: 'longitude' + aNameIdx, value: bytes2Float32(raw_long) });
-    ret_obj.push({ field: 'altitude' + aNameIdx, value: raw_alt / 10 });
+    ret_obj.push({ field: 'latitude_' + aNameIdx, value: bytes2Float32(raw_lat) });
+    ret_obj.push({ field: 'longitude_' + aNameIdx, value: bytes2Float32(raw_long) });
+    ret_obj.push({ field: 'altitude_' + aNameIdx, value: raw_alt / 10 });
   }
 
 
@@ -239,7 +239,7 @@ function MatchXDecode(aData) {
                 else {
                   if (sensorDataList[i].decodeFunc) {
                     var value = sensorDataList[i].decodeFunc(aData.slice(idx + 1, idx + data_len));
-                    var name = sensorDataList[i].name + sensorDataList[i].idx;
+                    var name = sensorDataList[i].name + "_" + sensorDataList[i].idx;
                     sensorDataList[i].idx++;
                     if (!isNaN(value)) {
                       ret_obj.push({ field: name, value: value });
