@@ -7,6 +7,10 @@
         "path": "./matchx/ntag_validator_eu868.json"
       },
       {
+        "name": "NTAG Validator - ISM2400",
+        "path": "./matchx/ntag_validator_ism2400.json"
+      },
+      {
         "name": "X2E Class C - ISM2400",
         "path": "./matchx/x2e_class_c_ism2400.json"
       },
