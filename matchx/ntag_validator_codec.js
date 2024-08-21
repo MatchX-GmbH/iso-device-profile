@@ -8,14 +8,29 @@ function decodeUplink(input) {
       var output = {};
       for (var i = 0; i < ret_data.length; i++) {
         // Convert generic fields to Validator
-        if (ret_data[i].field == "digital_0") {
-          output["validated"] = (ret_data[i].value != 0);
+        if (ret_data[i].field == "digital_0") {        
+          if (ret_data[i].value != 0) {
+            output["validated"] = 1;
+          }
+          else {
+            output["validated"] = 0;
+          }
         }
         else if (ret_data[i].field == "digital_1") {
-          output["dataVerified"] = (ret_data[i].value != 0);
+          if (ret_data[i].value != 0) {
+            output["dataVerified"] = 1;
+          }
+          else {
+            output["dataVerified"] = 0;
+          }
         }
         else if (ret_data[i].field == "digital_2") {
-          output["tamperClosed"] = (ret_data[i].value != 0);
+          if (ret_data[i].value != 0) {
+            output["tamperClosed"] = 1;
+          }
+          else {
+            output["tamperClosed"] = 0;
+          }
         }
         else {
           // Keep other fields.
